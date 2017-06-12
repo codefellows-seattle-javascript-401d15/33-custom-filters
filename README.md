@@ -22,7 +22,6 @@
   * `webpack.config.js`
     * this should include all of the production environment configurations used in lecture code
   * `karma.config.js`
-  * **note:** *do not* forget to `npm uninstall -D camelcase` and reinstall it to use version 3.0 (`npm i -S camelcase@3.0.0`)
 
 ## Description
   * Create a custom `filter` that will allow for real time fuzzy searching of galleries
