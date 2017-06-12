@@ -1,8 +1,8 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 34 - Filters and Directives
+![cf](https://i.imgur.com/7v5ASc8.png) Lab 33 - Filters & Custom Filters
 ======
 
 ## To Submit this Assignment
-  * create a fork of this repository
+  * continue to work on your existing lab31 codebase
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -26,4 +26,5 @@
 
 ## Description
   * Create a custom `filter` that will allow for real time fuzzy searching of galleries
-  * Use the `uppercase`, `lowercase`, `number`, `date`, `limitTo`, and `orderBy` built-in angular filters in your application *(note: this is simply for practice and can be used anywhere in your application)*
+  * Use the `uppercase`, `lowercase`, `number`, `date`, `limitTo`, and `orderBy` built-in angular filters in your application
+    *(note: this is simply for practice and can be used anywhere in your application)*
