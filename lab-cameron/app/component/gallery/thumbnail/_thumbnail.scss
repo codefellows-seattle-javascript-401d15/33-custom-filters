@@ -1,0 +1,14 @@
+@import "../../../scss/lib/theme/_index.scss";
+
+div{
+  text-align: center;
+}
+
+.thumbnail-pic {
+  min-width: 16vw;
+  max-width: 20em;
+}
+
+.thumbnail {
+  border: .00625rem solid $app-color-green;
+}

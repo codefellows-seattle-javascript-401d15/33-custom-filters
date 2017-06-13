@@ -1,0 +1,12 @@
+<li class="gallery-item">
+  <div ng-if="!galleryItemCtrl.showEditGallery">
+    <div class="gallery-info">
+      <p><strong>name:</strong> {{ galleryItemCtrl.gallery.name | customUppercase }}</p>
+      <p><strong>description:</strong> {{ galleryItemCtrl.gallery.desc }}</p>
+    </div>
+  </div>
+  <edit-gallery ng-if="galleryItemCtrl.showEditGallery"
+    gallery="galleryItemCtrl.gallery"></edit-gallery>
+  <button ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">edit</button>
+  <button ng-click="galleryItemCtrl.deleteGallery()">delete</button>
+</li>
