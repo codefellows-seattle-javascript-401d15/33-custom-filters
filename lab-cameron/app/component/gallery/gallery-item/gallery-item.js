@@ -17,15 +17,18 @@ module.exports = {
 };
 
 function GalleryItemController($log, $rootScope, galleryService) {
-  $log.debug('#GalleryItemController');
+  this.$onInit = () => {
+    $log.debug('#GalleryItemController');
 
-  this.showEditGallery = false;
+    this.showEditGallery = false;
+    this.gallery.daysAgo = new Date() - new Date(this.gallery.created);
 
-  this.deleteGallery = () => {
-    galleryService.deleteGallery(this.gallery._id)
-    .then(
-      res => $log.log(`${res.status}, gallery deleted`),
-      err => $log.error(err)
-    );
+    this.deleteGallery = () => {
+      galleryService.deleteGallery(this.gallery._id)
+      .then(
+        res => $log.log(`${res.status}, gallery deleted`),
+        err => $log.error(err)
+      );
+    };
   };
 }
