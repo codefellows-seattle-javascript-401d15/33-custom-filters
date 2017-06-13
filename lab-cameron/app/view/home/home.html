@@ -2,8 +2,15 @@
   <h2>Welcome Home!</h2>
   <create-gallery></create-gallery>
   <ul>
+    <label for="gallery search">search for a gallery:</label>
+    <input
+      name="gallery search"
+      type="text"
+      ng-model="homeCtrl.galleryFuzzy"
+      value="gallery"
+      placeholder="enter a gallery name here!">
     <gallery-item
-      ng-repeat="item in homeCtrl.galleries | customSort"
+      ng-repeat="item in homeCtrl.galleries | customFuzzySearch : homeCtrl.galleryFuzzy | orderBy : 'id' | limitTo : 666"
       gallery="item">
     </gallery-item>
   </ul>

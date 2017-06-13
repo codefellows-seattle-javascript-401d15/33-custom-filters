@@ -1,8 +1,9 @@
 <li class="gallery-item">
   <div ng-if="!galleryItemCtrl.showEditGallery">
     <div class="gallery-info">
-      <p><strong>name:</strong> {{ galleryItemCtrl.gallery.name | customUppercase }}</p>
+      <p><strong>name:</strong> {{ galleryItemCtrl.gallery.name | customUpperCase }}</p>
       <p><strong>description:</strong> {{ galleryItemCtrl.gallery.desc }}</p>
+      <p>created {{ galleryItemCtrl.gallery.daysAgo | date : "d" }} days ago</p>
     </div>
   </div>
   <edit-gallery ng-if="galleryItemCtrl.showEditGallery"

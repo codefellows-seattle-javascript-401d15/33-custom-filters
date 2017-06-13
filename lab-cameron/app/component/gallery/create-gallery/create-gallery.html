@@ -1,6 +1,7 @@
 <section class="create-gallery">
   <form name="createGalleryForm"
     ng-submit="createGalleryCtrl.createGallery()">
+    <span>Create a new gallery here!</span>
     <fieldset>
       <label for="name"></label>
       <input
@@ -19,7 +20,7 @@
         placeholder="description"
         ng-model="createGalleryCtrl.gallery.desc">
       </fieldset>
-      
+
       <button type="submit">create gallery</button>
   </form>
 </section>
