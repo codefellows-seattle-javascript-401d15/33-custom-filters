@@ -1,0 +1,20 @@
+@import "../../scss/lib/theme/_index.scss";
+
+.navbar {
+  border-bottom: 1px solid $app-color-blue;
+}
+
+.logo {
+  max-width: 8vw;
+}
+
+.main-heading {
+  padding-left: 2vw;
+  font-size: 3rem;
+  display: inline;
+}
+
+.main-nav {
+  float: right;
+  margin: 1em 1.25em 0 0;
+}
