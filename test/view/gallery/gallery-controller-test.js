@@ -39,7 +39,7 @@ describe('Gallery Controller', function() {
     });
 
     it('should have a title', done => {
-      expect(this.galleryCtrl.title).to.equal('This is where the pictures go');
+      expect(this.galleryCtrl.title).to.equal('Galleries');
       done();
     });
 
