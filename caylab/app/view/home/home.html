@@ -1,8 +1,21 @@
 <section class="home-content">
   <!-- <h2>{{homeCtrl.title}}</h2> -->
-  <a href="/#!/home">home</a>
-  <a href="/" ng-click="homeCtrl.logout()">sign out</a>
+  <!-- <a href="/#!/home">home</a> -->
+  <!-- <a href="/" ng-click="homeCtrl.logout()">sign out</a> -->
   <create-gallery></create-gallery>
+
+  <select
+  name="gallery selection"
+  ng-options="gallery as gallery.name for gallery in homeCtrl.galleries track by gallery._id"
+  ng-model="homeCtrl.currentGallery"></select>
+
+  <thumbnail-container
+    ng-if="homeCtrl.currentGallery"
+    gallery="homeCtrl.currentGallery"
+    currentGallery="homeCtrl.currentGallery"
+    galleries="homeCtrl.galleries">
+  </thumbnail-container>
+
   <input type="number" ng-model="homeCtrl.galleryLimit" placeholder="100" value="100">
 
   <input type="text" placeholder="search" ng-model="homeCtrl.searchValue">
@@ -14,16 +27,4 @@
     currentGallery="searchValue">
   </gallery-item>
   </ul>
-
-  <select
-    name="gallery selection"
-    ng-options="gallery as gallery.name for gallery in homeCtrl.galleries track by gallery._id"
-    ng-model="homeCtrl.currentGallery"></select>
-
-  <thumbnail-container
-    ng-if="homeCtrl.currentGallery"
-    gallery="homeCtrl.currentGallery"
-    currentGallery="homeCtrl.currentGallery"
-    galleries="homeCtrl.galleries">
-  </thumbnail-container>
 </section>

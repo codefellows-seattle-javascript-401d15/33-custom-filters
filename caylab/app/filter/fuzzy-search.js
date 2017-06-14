@@ -13,6 +13,6 @@ module.exports = function(){
 function fuzzySearch(input){
   if(!input) return /.*/
 
-  let searchValue = '.*' + input.toUpperCase().split('').join('.*') + '.*'
+  let searchValue = `.*${input.toUpperCase().split('').join('.*')}.*`
   return new RegExp(searchValue)
 }

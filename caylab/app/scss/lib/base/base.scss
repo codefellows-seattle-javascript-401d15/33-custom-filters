@@ -21,7 +21,12 @@ html, body{
   color: $brand-secondary;
 }
 
-main{
+.main-background{
+  width: 100vw;
+  background-color: $brand-tertiary;
+}
+
+#main-ui{
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
@@ -40,6 +45,11 @@ header navbar{
   margin-right: 10vw;
   display: inline;
   height: 8vh
+}
+
+footer{
+  bottom: 0;
+  height: 8vh;
 }
 
 header h2{
