@@ -1,5 +1,8 @@
 'use strict'
 
+require('./scss/lib/base/reset.css')
+require('./scss/lib/base/base.scss')
+
 const path = require('path')
 const camelcase = require('camelcase')
 const pascalcase = require('pascalcase')

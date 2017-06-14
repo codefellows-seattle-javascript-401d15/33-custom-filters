@@ -71,6 +71,24 @@ module.exports = {
             }
           ]
         })
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {sourceMap: true}
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                includePaths: [`${__dirname}/app/scss`]
+              }
+            }
+          ]
+        })
       }
     ]
   }

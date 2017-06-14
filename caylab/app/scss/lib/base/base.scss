@@ -1,0 +1,78 @@
+// **** VARS **** //
+$brand-primary: #181818;
+$brand-secondary: #444444;
+$brand-tertiary: #888888;
+$brand-quaternary: #FFFFFF;
+$padding: 0.5em;
+$font-size-primary: 1.025em;
+
+// **** MIXINS **** //
+
+@mixin input{
+  border-radius: 0.25em;
+  font-family: sans-serif;
+}
+
+// **** BASE STYLES **** //
+html, body{
+  width: 100vw;
+  height: 100vh;
+  background-color: $brand-primary;
+  color: $brand-secondary;
+}
+
+main{
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-radius: 0.15em;
+  background-color: $brand-secondary;
+  color: $brand-primary;
+}
+
+fieldset{
+  border-style: none;
+}
+
+header navbar{
+  top: 0;
+  margin-left: 60vw;
+  margin-right: 10vw;
+  display: inline;
+  height: 8vh
+}
+
+header h2{
+  font-size: 2.25em;
+  color: $brand-tertiary;
+}
+
+header navbar *{
+  display: inline;
+}
+
+a{
+  text-decoration: none;
+}
+
+input{
+  @include input;
+  background-color: $brand-secondary;
+  color: $brand-quaternary;
+  &:focus{
+    background-color: $brand-quaternary;
+    color: $brand-primary;
+  }
+}
+
+.btn-std{
+  @include input;
+  background-color: $brand-secondary;
+  color: $brand-quaternary;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  &:hover{
+    background-color: $brand-quaternary;
+    color: $brand-primary;
+  }
+}
