@@ -1,0 +1,33 @@
+<section>
+
+  <form name="createGalleryForm"
+    ng-submit="createGalleryCtrl.createGallery()">
+
+    <fieldset>
+      <label for="name">Name</label>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="name"
+        ng-model="createGalleryCtrl.gallery.name"
+        required>
+
+      </fieldset>
+
+      <fieldset>
+        <label for"description">Description</label>
+        <input
+        type="text"
+        name="description"
+        placeholder="description"
+        ng-model="createGalleryCtrl.gallery.desc"
+        required>
+
+      </fieldset>
+
+      <button class="btn-primary" type="submit">Create gallery</button>
+
+  </form>
+
+</section>

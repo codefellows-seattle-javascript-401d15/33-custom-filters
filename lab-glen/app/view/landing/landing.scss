@@ -1,0 +1,25 @@
+// VARS
+
+$font-stack: Helvetica, sans-serif;
+$black: #000;
+$white: #fff;
+$gutter-std: 2%;
+
+// mix ins
+
+@mixin pretty {
+  font: 100% $font-stack;
+  background: $white;
+  color: $black;
+}
+
+body {
+  @include pretty;
+  font-size: 2vw;
+}
+
+h2 {
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: $gutter-std;
+}
