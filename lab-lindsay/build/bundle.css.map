@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./app/component/navbar/app/component/navbar/_navbar.scss"],"names":[],"mappings":"AAAA;EACE,eAAc,EACf","file":"bundle.css","sourcesContent":["img {\n  max-width: 2vw;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./app/component/navbar/app/component/navbar/_navbar.scss"],"sourceRoot":""}
