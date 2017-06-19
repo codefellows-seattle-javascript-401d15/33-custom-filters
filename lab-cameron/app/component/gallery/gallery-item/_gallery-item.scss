@@ -1,0 +1,25 @@
+@import "../../../scss/lib/theme/_index.scss";
+
+button {
+  background: $app-color-blue;
+}
+
+.gallery-info {
+  padding-left: 4vw;
+  background: darken($app-color-green, 10%);
+  border: 1px solid $app-color-green;
+  color: darken($app-color-white, 15%);
+  font-size: 1.25rem;
+}
+
+.gallery-item {
+  margin: 2vw 0;
+  list-style: none;
+  p {
+    margin: .25em auto;
+    text-align: left;
+  }
+  strong {
+    color: $app-color-black;
+  }
+}
