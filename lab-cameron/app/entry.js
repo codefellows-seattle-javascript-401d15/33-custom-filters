@@ -6,10 +6,13 @@ const path = require('path');
 const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 const angular = require('angular');
-require('ng-file-upload')
-require('@uirouter/angularjs')
+require('angular-ui-bootstrap');
+require('angular-animate');
+require('angular-touch');
+require('ng-file-upload');
+require('@uirouter/angularjs');
 
-const slugram = angular.module('slugram', ['ui.router', 'ngFileUpload'])
+const slugram = angular.module('slugram', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngTouch', 'ngFileUpload']);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach(path => slugram.config(context(path)));
