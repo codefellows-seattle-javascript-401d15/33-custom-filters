@@ -1,6 +1,10 @@
 <li class="gallery-item">
-  <div ng-if="!galleryItemCtrl.showEditGallery">
-    <div class="gallery-info">
+  <div
+    ng-if="!galleryItemCtrl.showEditGallery">
+    <div
+      uib-accordion-group
+      class="gallery-info panel-default"
+      heading="{{ galleryItemCtrl.gallery.name }}">
       <p><strong>name:</strong> {{ galleryItemCtrl.gallery.name | customUpperCase }}</p>
       <p><strong>description:</strong> {{ galleryItemCtrl.gallery.desc }}</p>
       <p>created {{ galleryItemCtrl.gallery.daysAgo | date : "d" }} days ago</p>

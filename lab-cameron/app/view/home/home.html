@@ -6,13 +6,14 @@
     <input
       name="gallery search"
       type="text"
-      ng-model="homeCtrl.galleryFuzzy"
-      value="gallery"
+      ng-model="homeCtrl.gallerySearchTerm"
       placeholder="enter a gallery name here!">
-    <gallery-item
-      ng-repeat="item in homeCtrl.galleries | customFuzzySearch : homeCtrl.galleryFuzzy | orderBy : 'id' | limitTo : 666"
-      gallery="item">
-    </gallery-item>
+    <uib-accordion close-others="oneAtATime">
+      <gallery-item
+        ng-repeat="item in homeCtrl.galleries | customFuzzySearch : homeCtrl.gallerySearchTerm | orderBy : 'id' | limitTo : 666"
+        gallery="item">
+      </gallery-item>
+    </uib-accordion>
   </ul>
   <label for="gallery selection">Select a gallery to upload pics to!</label>
   <select
