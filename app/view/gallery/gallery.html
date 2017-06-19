@@ -1,0 +1,30 @@
+<section>
+  <h2>{{ galleryCtrl.title }}</h2>
+  <create-gallery></create-gallery>
+
+  <label for="filters">Filter for:</label>
+  <input
+    type="text"
+    name="filters"
+    ng-model="galleryCtrl.filter">
+
+  <ul>
+    <gallery-item
+    ng-if="galleryCtrl.filter"
+    ng-repeat="item in galleryCtrl.galleries | fuzzySearch : galleryCtrl.filter" gallery="item"></gallery-item>
+    <gallery-item
+    ng-if="!galleryCtrl.filter"
+    ng-repeat="item in galleryCtrl.galleries" gallery="item"></gallery-item>
+  </ul>
+
+  <label for="gallery selection">Use: </label>
+  <select
+    name="gallery selection"
+    ng-options="item as item.name for item in galleryCtrl.galleries track by item._id"
+    ng-model="galleryCtrl.currentGallery"
+    >
+ </select>
+
+  <thumbnail-container
+    ng-if="galleryCtrl.currentGallery" gallery="galleryCtrl.currentGallery"></thumbnail-containter>
+</section>
