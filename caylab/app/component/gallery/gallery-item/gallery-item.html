@@ -1,0 +1,25 @@
+<h1 class="gallery-title">{{galleryItemCtrl.gallery.name}}</h1>
+<h5 class="created-date">created: {{galleryItemCtrl.gallery.created | date: dd/mm/yyyy}}</h5>
+  <div
+  ng-if="!galleryItemCtrl.showEditGallery">
+    <div
+      ng-click="galleryItemCtrl.makeCurrentGallery()"
+      >
+      <ul>
+        <li>name: {{galleryItemCtrl.gallery.name}}</li>
+        <li>description: {{galleryItemCtrl.gallery.desc}}</li>
+        <li>id: {{galleryItemCtrl.gallery._id}}</li>
+        <ul>Pictures:
+          <li>
+            <li ng-repeat="image in galleryItemCtrl.gallery.pics track by $index">
+              <img src="{{image.imageURI}}" alt>
+              {{image.created | date : dd}}
+            </li>
+
+        </ul>
+      </ul>
+    </div>
+  </div>
+
+  <edit-gallery ng-if="galleryItemCtrl.showEditGallery" gallery="galleryItemCtrl.gallery"></edit-gallery>
+  <button ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">edit</button>
